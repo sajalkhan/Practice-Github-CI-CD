@@ -1,0 +1,81 @@
+#** practice how to write yml file
+name: sajal
+age: 80
+address: "rajshahi dhaka"
+active: true
+
+#! make object inside yml file example
+key:
+  key: value1
+  key2: value2
+  #write nested object
+  key3:
+      key: value3
+      key2: value4
+
+# 👆 ai yml file k json a convert korle amon hobe
+# "key": {
+#   "key": value1,
+#   "key2": value2,
+#   "key3": {
+#     "key": value3,
+#     "key2": value4
+#   }
+# }
+
+#! write yml file like json format example
+jsonObject: {key:value, key2:33, key3: {key:value, key2:value}}
+
+#! write array example
+array:
+  - item1
+  - item2
+  - key:
+      key1: value1
+      key2: value2
+
+jsonArray: [item1, item2]
+
+objectArray:
+  - key: value1
+    key1: value2
+  - key2: value2
+  - key3: value3
+    key: value1
+    key1: value2
+
+#👆 ai object a json a convert korle amon ta lgbe
+  # objectArray: [
+  #   {
+  #     "key": value1,
+  #     "key1": value2
+  #   },
+  #   {
+  #     "key2": value2
+  #   },
+  #   {
+  #     "key3": value3,
+  #     "key": value1,
+  #     "key1": value2
+  #   }
+  # ]
+
+#! write long text example
+longTextExample: >
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+
+#👆 aita use kore long text use kora jabe but eta diye new line \n asbe na
+
+longTextExample2: |
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+        this is a long text. this is a long text.
+
+#👌 ai example diye multiple line a \n or new line show korbe        
+
