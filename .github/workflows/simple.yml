@@ -17,6 +17,7 @@ jobs:
           npm -v     
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-commands"] #? run-shell-commands ai job sesh hole jate ei job kaj kore tai needs:[] er maje dependency ta diye dite hobe
     steps:
       - name: Directory PowerShell
         run: Get-Location
