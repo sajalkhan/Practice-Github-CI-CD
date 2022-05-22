@@ -3,12 +3,10 @@ name: Shell Commands
 
 # on: [push, pull_request]
 on:
-  # push:
-  schedule:
-    - cron: "0/15 * * * *"
-    # - cron: "0 8 * * 1-5"
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  push:
+    branches:
+      - master
+      - 'feat/*'   #feat/ diye surur j kono branch a push korle event fire hobe
 #👆 this will trigger an events like(push, pull_request) which run this entire workflow
 
 #👇 each workflow has one or more jobs
