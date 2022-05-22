@@ -1,7 +1,7 @@
 name: Shell Commands
 #👆 this is the name of our entire workflow
 
-on: [push]
+on: [push, pull_request]
 #👆 this will trigger an events like(push, pull_request) which run this entire workflow
 
 #👇 each workflow has one or more jobs
