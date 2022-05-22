@@ -1,0 +1,30 @@
+name: Shell Commands
+#👆 this is the name of our entire workflow
+
+# on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+#👆 this will trigger an events like(push, pull_request) which run this entire workflow
+
+#👇 each workflow has one or more jobs
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hello world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v     
+  run-windows-commands:
+    runs-on: windows-latest
+    needs: ["run-shell-commands"] #? run-shell-commands ai job sesh hole jate ei job kaj kore tai needs:[] er maje dependency ta diye dite hobe
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
