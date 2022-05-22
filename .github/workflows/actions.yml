@@ -4,8 +4,8 @@ name: Shell Commands
 # on: [push, pull_request]
 on:
   # push:
-  schedule:
-    - cron: "0/15 * * * *"
+  # schedule:
+    # - cron: "0/15 * * * *"
     # - cron: "0 8 * * 1-5"
   pull_request:
     types: [closed, assigned, opened, reopened]
