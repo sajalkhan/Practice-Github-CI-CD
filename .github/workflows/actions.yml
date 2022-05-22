@@ -1,7 +1,11 @@
 name: Shell Commands
 #👆 this is the name of our entire workflow
 
-on: [push, pull_request]
+# on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 #👆 this will trigger an events like(push, pull_request) which run this entire workflow
 
 #👇 each workflow has one or more jobs
